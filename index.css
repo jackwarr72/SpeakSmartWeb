@@ -1,0 +1,42 @@
+/* Global styles for SpeakSmart
+   - Tailwind is loaded via CDN in index.html
+   - This file is included in index.html: <link rel="stylesheet" href="/index.css">
+   - Use this file for small global overrides and custom CSS variables.
+*/
+
+:root{
+  /* CSS variables you can tweak */
+  --color-primary: #0A2540;
+  --color-accent: #635BFF;
+  --color-text: #32325D;
+  --max-content-width: 1200px;
+}
+
+html,body,#root{
+  height:100%;
+}
+
+body{
+  margin:0;
+  background:var(--bg, #F6F9FC);
+  color:var(--color-text);
+}
+
+/* Example utility overrides */
+.container{
+  max-width:var(--max-content-width);
+}
+
+/* Small responsive tweak for header spacing */
+header nav.container{padding-left:1rem;padding-right:1rem}
+
+/* Example: add a custom accent button style */
+.btn-accent{
+  background:var(--color-accent);
+  color:white;
+  padding:.6rem 1rem;
+  border-radius:9999px;
+  font-weight:700;
+}
+
+/* You can import additional CSS here, or add Tailwind directives if you install Tailwind locally */
